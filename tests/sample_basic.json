@@ -1,0 +1,12 @@
+{
+    "tmx_name":"sample",
+    "tmx_layer":"sample_layer",
+    "tmx_dimensions":25,
+    "tmx_dimensions_increment":2,
+    "tmx_amount":5,
+    "tmx_tile_width":108,
+    "tmx_tile_height":108,
+    "tmx_tile_set":"../sets/sample_tile_set.png",
+    "tmx_tile_set_name":"Sample Tile Set",
+    "tmx_gid_default":5 
+}

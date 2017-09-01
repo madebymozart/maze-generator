@@ -1,0 +1,29 @@
+{  
+    "tmx_name":"sample",
+    "tmx_layer":"sample_layer",
+    "tmx_dimensions":501,
+    "tmx_dimensions_increment":0,
+    "tmx_amount":150,
+    "tmx_tile_width":108,
+    "tmx_tile_height":108,
+    "tmx_tile_set":"../sets/sample_tile_set.png",
+    "tmx_tile_set_name":"Sample Tile Set",
+    "tmx_gid_default":5,
+    "tmx_gid_mapper":{  
+       "gid_bottom_left":7,
+       "gid_bottom_right":8,
+       "gid_cross":3,
+       "gid_end_down":11,
+       "gid_end_left":12,
+       "gid_end_right":13,
+       "gid_end_up":14,
+       "gid_horizontal":1,
+       "gid_horizontal_down":19,
+       "gid_horizontal_up":16,
+       "gid_vertical":2,
+       "gid_vertical_left":18,
+       "gid_vertical_right":17,
+       "gid_up_left":6,
+       "gid_up_right":9
+    }
+ }
