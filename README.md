@@ -1,8 +1,8 @@
-# TMXMazeGenerator
+# TIledMazeGenerator
 A maze generator for Tiles Map Editor (http://www.mapeditor.org/)
 
 ## Description
-TMXMazeGenerator is a C++ executable program that create randomly generated maze for the Tile Map Editor.
+TIledMazeGenerator is a C++ executable program that create randomly generated, perfect maze for the Tile Map Editor. A perfect maze is descripted as one without any loops or closed circuits, and without any inaccessible areas. Also called a simply-connected Maze. From each point, there is exactly one path to any other point. The Maze has exactly one solution
 
 ## Features
  * Gapless Generation (No Clustered Mazes)
@@ -39,5 +39,3 @@ It's C++, Just import the code in any C++ compatable IDE, MAke sure you have C++
  * CLion - Open root directory containing `CMakeLists.txt`
  * Xcode - Coming Soon!
  * Visual Studio - Coming Soon!
- 
- - Mozart Louis
