@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(TMXMazeGenerator)
+project(TiledMazeGenerator)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -12,4 +12,4 @@ set(SOURCE_FILES
         source/mapper/mapper.hxx
         source/main.cxx source/globals.hxx)
 
-add_executable(TMXMazeGenerator ${SOURCE_FILES})
+add_executable(TiledMazeGenerator ${SOURCE_FILES})
