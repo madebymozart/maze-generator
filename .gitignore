@@ -1,5 +1,12 @@
 # User-specific stuff:
-.idea/*
+.idea/codeStyleSettings.xml
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+# iml files
+*.iml
 
 # CMake
 cmake-build-debug/

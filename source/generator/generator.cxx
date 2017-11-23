@@ -1,11 +1,12 @@
 /// Copyright (c) 2017 Mozart Louis
-/// This code is licensed under MIT license (see LICENSE.txt for details)
+/// This code is licensed under MIT license (see LICENSE for details)
 
 #include "generator.hxx"
 
-Generator::Generator(int dimensions) : gen_(rd_()),
-                                       matrix_(dimensions),
-                                       dimensions_(dimensions) {
+Generator::Generator(int dimensions)
+    : gen_(rd_()),
+      matrix_(dimensions),
+      dimensions_(dimensions) {
 
   /// Number can't be even so this will automatically be incremented
   if (matrix_ % 2 == 0)matrix_++;
@@ -24,9 +25,9 @@ Generator::~Generator() {
   delete[] n_matrix_;
 }
 
-int** Generator::initializeMatrix() {
+int **Generator::initializeMatrix() {
   /// Creating empty maze
-  auto empty_maze = new int* [dimensions_];
+  auto empty_maze = new int *[dimensions_];
   for (auto i = 0; i < dimensions_; i++)
     empty_maze[i] = new int[dimensions_];
 
@@ -34,7 +35,7 @@ int** Generator::initializeMatrix() {
 }
 
 void Generator::initializeNMatrix() {
-  n_matrix_ = new int* [4];
+  n_matrix_ = new int *[4];
   for (auto i = 0; i < 4; i++) n_matrix_[i] = new int[3];
 
   /// Set initial for matrix
@@ -50,7 +51,7 @@ void Generator::initializeNMatrix() {
 
 void Generator::initializeStack() {
   const int s = matrix_ * matrix_ * 100;
-  stack_ = new int* [s];
+  stack_ = new int *[s];
   for (auto i = 0; i < s; i++) stack_[i] = new int[2];
 
   /// Add 2 to the matrix to assure we don't run our of bounds
@@ -65,7 +66,7 @@ void Generator::push(int row, int col) {
   stack_index_++;
 }
 
-void Generator::pop(int* row, int* col) {
+void Generator::pop(int *row, int *col) {
   stack_index_--;
 
   if (stack_index_ >= 0) {
@@ -74,7 +75,7 @@ void Generator::pop(int* row, int* col) {
   }
 }
 
-int** Generator::generateMaze(int start_row, int start_col, const int gid_default) {
+int **Generator::generateMaze(int start_row, int start_col, const int gid_default) {
   /// Initialize empty maze and visited matrix
   auto generated_maze = initializeMatrix();
   generated_maze[start_row][start_col] = gid_default;
@@ -110,7 +111,7 @@ int** Generator::generateMaze(int start_row, int start_col, const int gid_defaul
 
       /// Where the magic happens
       if (!(row < 0 || col < 0 || (row == 0 || col == 0 || row == matrix_ - 1
-                                   || col == matrix_ - 1))) {
+          || col == matrix_ - 1))) {
         if (visited[row][col] == 0) {
           if (start_row == row && start_col != col) {
             if (start_col > col) {
@@ -141,7 +142,7 @@ int** Generator::generateMaze(int start_row, int start_col, const int gid_defaul
 
         } else {
           counter = n_matrix_[0][2] + n_matrix_[1][2]
-                    + n_matrix_[2][2] + n_matrix_[3][2];
+              + n_matrix_[2][2] + n_matrix_[3][2];
         }
       }
     }
