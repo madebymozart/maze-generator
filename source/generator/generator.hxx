@@ -11,7 +11,16 @@
 
 #include "../globals.hxx"
 
-class Generator {
+using matrix = int**;
+
+class IGenerator {
+  /**
+   * Interface method for generating a maze
+   */
+   virtual matrix generateMaze(int /* s_row */, int /* s_col */, const int gid_default)=0;
+}
+
+class Generator : IGenerator{
  public:
   /**
    * Constructor
@@ -26,7 +35,7 @@ class Generator {
   /**
    * Generates the maze using.
    */
-  virtual int** generateMaze(int /* s_row */, int /* s_col */, const int gid_default);
+  int** generateMaze(int /* s_row */, int /* s_col */, const int gid_default) override;
  private:
   /**
    * Initializes and empty matrix and just initializes it all with 0
