@@ -26,7 +26,7 @@ class Generator {
   /**
    * Generates the maze using.
    */
-  int** generateMaze(int /* s_row */, int /* s_col */, const int gid_default);
+  virtual int** generateMaze(int /* s_row */, int /* s_col */, const int gid_default);
  private:
   /**
    * Initializes and empty matrix and just initializes it all with 0
