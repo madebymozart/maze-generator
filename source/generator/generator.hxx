@@ -18,7 +18,7 @@ class IGenerator {
    * Interface method for generating a maze
    */
    virtual matrix generateMaze(int /* s_row */, int /* s_col */, const int gid_default)=0;
-}
+};
 
 class Generator : IGenerator{
  public:
