@@ -29,7 +29,11 @@ int **Generator::initializeMatrix() {
   /// Creating empty maze
   auto empty_maze = new int *[dimensions_];
   for (auto i = 0; i < dimensions_; i++)
-    empty_maze[i] = new int[dimensions_];
+  {
+      empty_maze[i] = new int[dimensions_];
+      for (auto j = 0; j < dimensions_; j++)
+          empty_maze[i][j] = 0;
+  }
 
   return empty_maze;
 }
