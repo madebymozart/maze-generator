@@ -12,4 +12,8 @@ set(SOURCE_FILES
         source/mapper/mapper.hxx
         source/main.cxx source/globals.hxx)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
 add_executable(TiledMazeGenerator ${SOURCE_FILES})
+target_link_libraries(TiledMazeGenerator PRIVATE Threads::Threads)
