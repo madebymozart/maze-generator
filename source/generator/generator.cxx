@@ -39,6 +39,7 @@ void Generator::initializeNMatrix() {
   for (auto i = 0; i < 4; i++) n_matrix_[i] = new int[3];
 
   /// Set initial for matrix
+  /// Unit vectors for left, up, right and down
   n_matrix_[0][0] = -1;
   n_matrix_[0][1] = 0;
   n_matrix_[1][0] = 0;
@@ -59,6 +60,7 @@ void Generator::initializeStack() {
 }
 
 void Generator::push(int row, int col) {
+  /// Stack is a stack of tuples which represent x, y coordinates which are on
   if (stack_index_ >= 0) {
     stack_[stack_index_][0] = row;
     stack_[stack_index_][1] = col;
@@ -68,7 +70,7 @@ void Generator::push(int row, int col) {
 
 void Generator::pop(int *row, int *col) {
   stack_index_--;
-
+  /// See comment for push
   if (stack_index_ >= 0) {
     *row = stack_[stack_index_][0];
     *col = stack_[stack_index_][1];
