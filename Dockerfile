@@ -6,13 +6,11 @@ RUN apk add --no-cache  \
     gcc \
     git \
     make \
-    musl-dev \
-    musl \
-    openssh
+    musl
 
-RUN mkdir /code  \
-    && git clone https://github.com/prodbymozart/maze-generator.git /code \
-    && cd /code \
+ADD . /code
+
+RUN cd /code \
     && cmake . \
     && make
 
