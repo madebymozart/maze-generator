@@ -1,7 +1,5 @@
-bin
-tests
 CMakeCache.txt
 CMakeFiles/
+cmake_install.cmake
 Makefile
 TiledMazeGenerator
-cmake_install.cmake
